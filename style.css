@@ -82,7 +82,7 @@ nav{
 }
 .sliderTitle{
     position: absolute;
-    color: #194948;
+    color: #4c99cc;
     font-size: 70px;
     top: 20%;
     right:22%;
@@ -430,6 +430,109 @@ box-shadow: 0px -2px 9px 8px rgba(0,0,0,0.62);
     font-size: 14px;
   }
 
+  @media only screen and (max-width: 1199px) {
+    .slider{
+      clip-path: none;
+    }    
+    .sliderPrice{
+      display: flex;
+      font-size: 5rem;
+      padding: 10px; 
+      margin: 0;
+      top: 0;  
+    }
+    .sliderTitle{
+      top: 0;
+      font-size: 350%;
+      padding: 10px;
+      right: 0;   
+    }
+    .sliderImg{
+      width: 90%;
+      margin-left: 10px;
+    }
+    .slideBg{
+      width: 90%;
+      height: 90%;
+    }
+    .buyButton{
+      bottom: 3px;
+      right: 3px;
+    }
+
+    .product{
+      clip-path: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: fit-content;
+    }
+    .productButton{
+      margin-bottom: 20px;
+    }
+
+    .productImg{
+      width: 50%;
+    }
+    .productDetails{
+      overflow: auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      align-items: center;
+      top: 0;
+    }
+    .productTitle{
+      font-size: 100px;
+      margin: 0;
+    }
+    
+    .productPrice{
+      font-size: 100px;
+    }
+    .colors, .sizes{
+      margin: 5px;
+    }
+    
+    .productButton{
+      text-align: center;
+      margin-right: 0;
+      margin-top: 30px;
+    }
+
+    .gallery{
+      display: flex;
+      flex-direction: column;
+    }
+    .galleryItem:nth-child(1) img, .galleryItem:nth-child(3) img{
+      display: none;
+    }
+
+    .galleryItem:nth-child(2) img{
+      width: 100%;
+      align-items: center;
+    }
+    .galleryItem{
+      padding: 0;
+    }
+
+    .galleryTitle{
+      padding: 0;
+      margin: 5px;
+      text-align: center;
+      text-shadow: none;
+    }
+    
+    .nsButton{
+      margin-bottom: 5px;
+      border-radius: 4px;
+    }
+    
+}
+
   @media only screen and (max-width: 600px) {
     nav{
       padding: 20px;
@@ -552,22 +655,6 @@ box-shadow: 0px -2px 9px 8px rgba(0,0,0,0.62);
       padding: 20px;
     }
 
-    @media (min-width: 992px) and (max-width: 1199px) {
-      /* Header */
-      #logo-img {
-        background: url('../images/restaurant-logo_medium.png') no-repeat;
-        width: 100px;
-        height: 100px;
-        margin: 5px 5px 5px 0;
-      }
-      /* End Header */
     
-      /* Home Page */
-      .container .jumbotron {
-        background: url('../images/jumbotron_992.jpg') no-repeat;
-        height: 558px;
-      }
-      /* End Home Page */
-    }
-
+    
   }
