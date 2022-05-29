@@ -456,8 +456,12 @@ box-shadow: 0px -2px 9px 8px rgba(0,0,0,0.62);
       height: 90%;
     }
     .buyButton{
+      display: flex;
       bottom: 3px;
       right: 3px;
+      width: fit-content;
+      text-align: center;
+      align-items: center;
     }
 
     .product{
@@ -502,6 +506,7 @@ box-shadow: 0px -2px 9px 8px rgba(0,0,0,0.62);
       margin-right: 0;
       margin-top: 30px;
     }
+
 
     .gallery{
       display: flex;
@@ -573,18 +578,17 @@ box-shadow: 0px -2px 9px 8px rgba(0,0,0,0.62);
     .sliderPrice{
       position: absolute;
       top: unset;
-      bottom: 0;
+        bottom: 0;
       font-size: 60px;
-      font-weight: 300;
     }
     
     .buyButton{
       display: flex;
       top: 0;
-      left: 65%;
+      left: 5px;  
       border: 2px solid rgb(71, 73, 233);
       width: 30%;
-      height: fit-content;
+      height: fit-content;  
       font-size: 1.5rem;
     }
 
