@@ -120,15 +120,90 @@ currentProductSizes.forEach((size, index) => {
 
 const productButton = document.querySelector(".productButton");
 const payment = document.querySelector(".payment");
-const close = document.querySelector(".close");
+const paymentClose = document.querySelector(".paymentClose");
 
 productButton.addEventListener("click",()=>{
   payment.style.display = "flex";
 });
 
-close.addEventListener("click", ()=>{
+paymentClose.addEventListener("click", ()=>{
   payment.style.display = "none";
 })
+
+//Form validation
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+const form = document.querySelector(".form");
+const username = document.getElementById('username');
+const password = document.getElementById('password');
+
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  checkInputs();
+});
+
+function checkInputs() {
+	// trim to remove the whitespaces
+	const usernameValue = username.value.trim();
+	const passwordValue = password.value.trim();
+
+	if(usernameValue === '') {
+		setErrorFor(username, 'Username cannot be blank');
+	} else {
+		setSuccessFor(username);
+	}
+	
+	if(passwordValue === '') {
+		setErrorFor(password, 'Password cannot be blank');
+	} else {
+		setSuccessFor(password);
+	}
+}
+
+function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const errorMessage = formControl.querySelector('.errorMessage');
+	formControl.className = 'formControl error';
+	errorMessage.innerText = message;
+}
+
+function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = 'formControl success';
+}
+
+
+
+const formClose = document.querySelector(".formClose");
+const signIn = document.querySelector(".signIn")
+
+signIn.addEventListener("click",()=>{
+  form.style.display = "initial";
+});
+
+formClose.addEventListener("click", ()=>{
+  // document.querySelectorAll(".formControl.error .formInput").style.border = "2px solid black";
+  // document.querySelectorAll(".formControl.success .formInput").style.border = "2px solid black";
+  // document.querySelectorAll(".formControl.error .errorMessage").style.visibility = "hidden";
+  // document.querySelectorAll(".formControl.error .exclaiminationMark").style.visibility = "hidden";
+  // document.querySelectorAll(".formControl.success .checkMark").style.visibility = "hidden";
+  form.style.display = "none";
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

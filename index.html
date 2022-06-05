@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="navItem">   
-                <span class="limitedOffer">Limted Offer!</span>
+                <span class="signIn">Sign in</span>
             </div>
         </div>
         <div class="navBottom"> 
@@ -143,7 +143,7 @@
                 <input type="text" placeholder="yyyy" class="payInput sm">
             </div>
             <button class="payButton">Checkout</button>
-            <span class="close">X</span>
+            <span class="paymentClose">X</span>
         </div> 
     </div>
     <div class="gallery">
@@ -222,10 +222,10 @@
         <div class="footerRight">
             <div class="footerRightMenu">
                 <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
-                <div class="fMail">
+                <form class="fMail">
                     <input type="text" placeholder="your@email.com" class="fInput">
                     <button class="fButton">Join!</button>
-                </div>
+                </form>
             </div>
             <div class="footerRightMenu">
                 <h1 class="fMenuTitle">Follow Us</h1>
@@ -241,6 +241,25 @@
             </div>
         </div>
     </footer>
+    <form class="form" id="form">
+        <h1 class="formTitle">Log in</h1>
+        <div class="formControl">
+            <label for="username" class="formLabel">Username</label>
+            <input type="text" placeholder="YourAccount" id="username" class="formInput">
+            <img src="./img/Exclamation-Mark-PNG-File.png" width="20x" alt="" class="exclaiminationMark">
+            <img src="./img/check-mark-with-transparent-background-19.png" width="20x" alt="" class="checkMark">
+            <div class="errorMessage">Error message</div>
+        </div>
+        <div class="formControl">
+            <label for="password" class="formLabel">Password</label>
+            <input type="password" placeholder="**************" id="password" class="formInput">
+            <img src="./img/Exclamation-Mark-PNG-File.png" width="20px" alt="" class="exclaiminationMark">
+            <img src="./img/check-mark-with-transparent-background-19.png" width="20x" alt="" class="checkMark">
+            <div class="errorMessage">Error message</div>
+        </div>
+        <button class="formLoginButton" type="submit" value="Submit">Log in</button>
+        <span class="formClose">X</span>
+    </form> 
     <script src="./app.js"></script>
 </body>
 </html>
